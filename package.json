@@ -8,5 +8,8 @@
   "license": "MIT",
   "engines" : {
     "node" : ">=8.1.4"
+  },
+  "devDependencies": {
+    "webdriver-manager": ">=12.0"
   }
 }
