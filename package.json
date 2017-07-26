@@ -2,14 +2,22 @@
   "name": "experiment-js-e2e-test",
   "version": "1.0.0",
   "description": "This is a prototype of doing end-to-end (e2e) tests in/on different browsers/devices with javascipt. ",
-  "main": "index.js",
+  "main": "./tests/index.js",
   "repository": "https://github.com/rebel-l/experiment-js-e2e-test.git",
   "author": "Lars Gaubisch <lars.gaubisch@home24.de>",
   "license": "MIT",
-  "engines" : {
-    "node" : ">=8.1.4"
+  "engines": {
+    "node": ">=8.1.4"
   },
   "devDependencies": {
     "webdriver-manager": ">=12.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": ">=3.5"
+  },
+  "scripts": {
+    "updateWebmanger": "./node_modules/.bin/webdriver-manager update",
+    "linkDrivers": "node ./etc/setupDrivers.js",
+    "build": "yarn run updateWebmanger && yarn run linkDrivers"
   }
 }
