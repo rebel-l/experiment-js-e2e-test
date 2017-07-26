@@ -13,11 +13,13 @@
     "webdriver-manager": ">=12.0"
   },
   "dependencies": {
+    "jest": "^20.0.4",
     "selenium-webdriver": ">=3.5"
   },
   "scripts": {
-    "updateWebmanger": "./node_modules/.bin/webdriver-manager update",
+    "build": "yarn run updateWebmanger && yarn run linkDrivers",
     "linkDrivers": "node ./etc/setupDrivers.js",
-    "build": "yarn run updateWebmanger && yarn run linkDrivers"
+    "test": "./node_modules/.bin/jest",
+    "updateWebmanger": "./node_modules/.bin/webdriver-manager update"
   }
 }
