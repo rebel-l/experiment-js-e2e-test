@@ -19,5 +19,7 @@ afterAll(() => {
 });
 
 test('check start page', () => {
+    browser.navigate().to('https://www.home24.de');
+
     expect(1).toBe(1);
 });
